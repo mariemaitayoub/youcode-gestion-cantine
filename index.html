@@ -54,243 +54,268 @@
     </header>
     <main class="ml-64">
         <div class="grid grid-cols-4 gap-4 p-6">
-            <div class=" rounded-xl shadow-lg p-5">
-                <div>
-                    <img src="icons/bowl.svg" alt="icon-6">
+
+            <div class="flex items-center shadow-lg p-5 ">
+                <div class="flex justify-between gap-4 ">
+                    <img src="icons/stat-recettes.svg" alt="icon-6">
                 </div>
                 <div>
-                    <p class="text-sm text-green-700">recettes en Réserve</p>
-                    <p class="text-3xl text-slate-800">12</p>
-                    <p class="text-sm text-slate-500">plats disponible</p>
+                    <p class="text-lg text-green-700 font-bold">recettes en Réserve</p>
+                    <p class="text-3xl text-slate-700 font-bold">12</p>
+                    <p class="text-sm text-slate-500 ">plats disponible</p>
 
                 </div>
             </div>
-            <div class="rounded-xl shadow-lg p-5 ">
-                <div>
-                    <img src="" alt="icon-7">
+
+            <div class="flex  items-center shadow-lg p-5">
+                <div class="flex justify-between gap-4  ">
+                    <div>
+                        <img src="icons/stat-jours.svg" alt="icon-7">
+                    </div>
+                    <div>
+                        <p class="text-lg text-blue-600 font-bold">Jours prets</p>
+                        <p class="text-3xl text-slate-700 font-bold">3/5</p>
+                        <p class="text-sm text-slate-500">jours completes</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center p-5  shadow-lg ">
+                <div class="flex justify-between gap-4  ">
+                    <img src="icons/stat-cout.svg" alt="icon-8">
                 </div>
                 <div>
-                    <p>Jours prets</p>
-                    <p>3/5</p>
-                    <p>jours completes</p>
+                    <p class="text-lg text-purple-500 font-bold">cout de la semaine</p>
+                    <p class="text-3xl text-slate-700 font-bold">180 DH</p>
+                    <p class="text-sm text-slate-500">par apprenant</p>
 
                 </div>
             </div>
-            <div class="rounded-lg p-5 shadow-lg">
-                <div>
-                    <img src="" alt="icon-8">
-                </div>
-                <div>
-                    <div>cout de la semaine</div>
-                    <div>180 DH</div>
-                    <div>par apprenant</div>
 
-                </div>
-            </div>
-            <div class="p-5 rounded-lg shadow-lg">
-                <div>
-                    <img src="" alt="icon-9">
+            <div class="flex items-center p-5 shadow-lg ">
+                <div class="flex justify-between gap-4 ">
+                    <img src="icons/stat-equilibre.svg" alt="icon-9">
                 </div>
                 <div>
-                    <div>equilibre alimentaire</div>
-                    <div>ok</div>
-                    <div>1 plat bio</div>
+                    <p class="text-lg text-yellow-500 font-bold">equilibre alimentaire</p>
+                    <p class="text-3xl text-slate-700 font-bold">ok</p>
+                    <p class="text-sm text-slate-500">1 plat bio</p>
 
                 </div>
             </div>
         </div>
 
-        <section class="shadow-xl rounded-xl bg-white p-6">
-            <div>
-                <div>
+        <section class="shadow-xl rounded-xl bg-white p-6 m-4 border-slate-100 border">
+            <div class="mb-4">
+                <div class="flex items-center gap-3 ">
+                    <img src="icons\calendar-navy.svg" alt="" class="w-7 ">
 
-                    <img src="" alt="">
                     <div>
-                        <p class="">Menu de la semaines</p>
-                        <p>du lundi au vendredi</p>
+                        <p class="font-bold text-slate-700 ">Menu de la semaines</p>
+                        <p class="text-gray-400 text-sm">du lundi au vendredi</p>
                     </div>
                 </div>
+
             </div>
-            <div class="shadow-lg rounded-lg bg-white p-6 grid grid-cols-5 gap-5">
-                <article class="shadow-sm rounded-lg bg-white ">
-                    <div>
-                        <div>
-                            <span>Lundi</span>
-                            <p>20 oct 2026</p>
+            <div class="grid grid-cols-5 gap-4">
+                <article class="shadow-sm rounded-lg bg-white border border-slate-100 overflow-hidden ">
+
+                    <div class="bg-blue-50 px-3 py-3 border-b border-slate-200 ">
+                        <span class="font-bold">Lundi</span>
+                    </div>
+                    <div class="divide-y divide-slate-100">
+                        <div class="p-3">
+                            <label for="l-entree" class="block mb-2 text-sm font-medium text-slate-700">Entrée</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
                         </div>
-                        <div>
-                            <div>
-                                <label for="">Entree</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">plat principale </label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">dessert</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
+                        <div class="p-3  ">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">plat principale </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">dessert</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
                         </div>
                     </div>
-                    </article>
-                    <div>
-                        <div>
-                            <span>Lundi</span>
-                            <p>20 oct 2026</p>
-                        </div>
-                        <div>
-                            <div>
-                                <label for="">Entree</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">plat principale </label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">dessert</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <span>Mardi</span>
-                            <p>21 oct 2026</p>
-                        </div>
-                        <div>
-                            <div>
-                                <label for="">Entree</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">plat principale </label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">dessert</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <span>Mercredi</span>
-                            <p>23 oct 2026</p>
-                        </div>
-                        <div>
-                            <div>
-                                <label for="">Entree</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">plat principale </label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">dessert</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <span>Vendredi</span>
-                            <p>24 oct 2026</p>
-                        </div>
-                        <div>
-                            <div>
-                                <label for="">Entree</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">plat principale </label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="">dessert</label>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+
                 </article>
-                <div>
 
-                </div>
+                <article class="shadow-sm rounded-lg bg-white border border-slate-100 overflow-hidden ">
+
+                    <div class="bg-blue-50 px-3 py-3 border-b border-slate-200 ">
+                        <span class="font-bold">Mardi</span>
+                    </div>
+                    <div class="divide-y divide-slate-100">
+                        <div class="p-3">
+                            <label for="m-entree" class="block mb-2 text-sm font-medium text-slate-700">Entrée</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3  ">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">plat principale
+                            </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">dessert</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="shadow-sm rounded-lg bg-white border border-slate-100 overflow-hidden ">
+
+                    <div class="bg-blue-50 px-3 py-3 border-b border-slate-200 ">
+                        <span class="font-bold">Mercredi</span>
+                    </div>
+                    <div class="divide-y divide-slate-100">
+                        <div class="p-3">
+                            <label for="l-entree" class="block mb-2 text-sm font-medium text-slate-700">Entrée</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3  ">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">plat principale </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">dessert</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="shadow-sm rounded-lg bg-white border border-slate-100 overflow-hidden ">
+
+                    <div class="bg-blue-50 px-3 py-3 border-b border-slate-200 ">
+                        <span class="font-bold">Jeudi</span>
+                    </div>
+                    <div class="divide-y divide-slate-100">
+                        <div class="p-3">
+                            <label for="l-entree" class="block mb-2 text-sm font-medium text-slate-700">Entrée</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3  ">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">plat principale </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">dessert</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="shadow-sm rounded-lg bg-white border border-slate-100 overflow-hidden ">
+
+                    <div class="bg-blue-50 px-3 py-3 border-b border-slate-200 ">
+                        <span class="font-bold">vendredi</span>
+                    </div>
+                    <div class="divide-y divide-slate-100">
+                        <div class="p-3">
+                            <label for="l-entree" class="block mb-2 text-sm font-medium text-slate-700">Entrée</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3  ">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">plat principale </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="p-3">
+                            <label for="" class="block mb-2 text-sm font-medium text-slate-700">dessert</label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                </article>
+
+
         </section>
+        <section class="shadow-xl rounded-xl bg-white p-6 m-4 border border-slate-100">
+            <div class="flex justify-between items-center  mb-4">
+                <div class="flex items-center gap-3">
+                    <img src="icons/database.svg" alt="" class="w-7 h-7">
+                    <h2 class="font-bold text-slate-700">reserve de recettes</h2>
+                    <p class="text-gray-400 text-sm">12 recette</p>
+                </div>
 
+                <button class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg px-4 py-2"> +
+                    Ajouter
+                    une recette</button>
 
+            </div>
+
+        </section>
     </main>
 </body>
 
