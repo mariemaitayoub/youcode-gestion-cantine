@@ -331,13 +331,15 @@
                 <input type="text" id="titre" name="titre" placeholder="Titre de la recette (ex: Couscous)" required
                     class="border border-slate-300 rounded-lg px-4 py-2 text-sm  focus:ring-blue-500">
                 <label class="block text-sm font-medium text-slate-700 mb-">Catégorie</label>
-                <select id="categorie" class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-blue-500">
+                <select id="categorie"
+                    class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-blue-500">
                     <option value="entree">Entrée</option>
                     <option value="plat">Plat principal</option>
                     <option value="dessert">Dessert</option>
                 </select>
                 <label class="block text-sm font-meduim text-slate-700 mb-2">Tags</label>
-                <select id="tag" class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-blue-500">
+                <select id="tag"
+                    class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-blue-500">
                     <option value="bio">Bio</option>
                     <option value="Végétarien">Végétarien</option>
                     <option value="Classique">Classique</option>
@@ -357,9 +359,9 @@
 
         </dialog>
 
-       <div>
+        <div>
 
-       </div>
+        </div>
 
 
         <script>
@@ -380,27 +382,72 @@
 
 
             // const titre=document.querySelectorAll("input[name='titre']")
-           const titre=document.getElementById('titre')
-           const categories=document.getElementById("categorie")
-           const tags=document.getElementById('tag')
-           const  photo=document.getElementById('photo')
+            const titre = document.getElementById('titre')
+            const categories = document.getElementById("categorie")
+            const tags = document.getElementById('tag')
+            const photo = document.getElementById('photo')
 
-           const form=document.querySelector('.form')
-           form.addEventListener("submit",function(event){
-            event.preventDefault();
-            const nom=titre.value.trim();
-            const cat=categories.value;
-            const tagg=tags.value;
-            const photo=photo.file[0];
+            const form = document.querySelector('.form')
+
+            let recettes=[]
+            const reserve=document.getElementById('reserve')
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const nom = titre.value.trim();
+                const cat = categories.value;
+                const tagg = tags.value;
+                const photoPlat = photo.files[0];
+
+let photoUrl=''
+if(photoPlat){
+    photoUrl=URL.createObjectURL(photoPlat)
+}
+const newrecet={
+    id:Date.now(),
+    titre: nom,
+    categorie :cat,
+    tag:tagg,
+    image : photoUrl
+}
+recettes.push(newrecet);
+form.reset();
+afficheRecettes();
+modal.close();
+            })
+
+                // console.log(nom)
+                // console.log(cat)
+                // console.log(tagg)
+                // console.log(photoPlat)
+
+            //})
 
 
-
-            console.log(nom)
-            console.log(cat)
-            console.log(tagg)
-console.log(photo)
-
-        })
+            function afficheRecettes(){
+                reserve.innerHTML=``
+                recettes.forEach(recette =>{
+                    const carte=document.createElement('div')
+                    carte.className='recet'
+                    carte.innerHTML=`
+                    
+                    <h3>${recette.titre}</h3> 
+                    <p>categorie :${recette.categorie}</p>
+                    <p>Tags :${recette.tag}</p>
+                    <div class='action'>
+                        <button onclick="modRecette(${recette.id})">Modifier</button>
+                        <button onclick='supprimer(${recette.id})'>Supprimer</button>
+                    `;
+                    reserve.appendChild(carte)
+                })
+            }
+            function supprimer(id){
+                const confimat=confirm('wach mta2akad')
+                if(confirmat){
+                 recettes=recettes.filter(recette =>recette.id !== id)
+                 afficheRecettes()   
+                }
+            }
+            
 
 
 
