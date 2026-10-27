@@ -1,7 +1,7 @@
 const open = document.querySelector("#openPopup");
 const modal = document.querySelector("#popup");
 const clos = document.querySelectorAll(".closePopup");
-const compteur=document.getElementById('reserve')
+const compteur=document.getElementById('compteur-recettes')
 const form = document.querySelector('.form');
 const reserve = document.getElementById('reserve');
 let recettes = [];
@@ -10,6 +10,11 @@ open.addEventListener("click", function () {
 });
 
 
+for (const btn of clos) {
+    btn.addEventListener("click", function () {
+        modal.close();
+    });
+}
 
 const titleIn = document.querySelector("#titre");
 const categoriesIn = document.querySelector("#categorie");
@@ -21,11 +26,6 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
 
 
-for (const btn of clos) {
-    btn.addEventListener("click", function () {
-        modal.close();
-    });
-}
 
 const nom = titleIn.value.trim();
 const cat = categoriesIn.value;
@@ -53,7 +53,8 @@ modal.close();
 
 function afficheRecettes() {
     reserve.innerHTML = ``;
-    compteur.textContent=recettes.length;
+    if (compteur)compteur.textContent=recettes.length;
+    menu();
     recettes.forEach(recette => {
         const carte = document.createElement('div');
         carte.className = 'recet bg-white p-4 rounded-xl shadow-md border border-slate-100 flex flex-col gap-2 transition-transform hover:shadow-md hover:-translate-y-1';
@@ -88,7 +89,26 @@ function supprimer(id) {
     }
 }
 
+function menu(){
+   let selectEntree=`<option value=''>choisir une entree</option>`
+   let selectPlat=`<option value=''>choisir un plat</option>`
+   let selectDessert=`<option value=''>choisir un dessert</option>`
 
+   
+recettes.forEach(recette =>{
+const option=`<option value='${recette.id}'>${recette.titre}(${recette.prix}DH)</option>`
+ 
+if(recette.categorie ==='entree')selectEntree+=option;
+else if(recette.categorie==='plat')selectPlat+=option;
+else if (recette.categorie==='dessert')selectDessert+=option;
+
+
+});
+document.querySelectorAll(".select-entree").forEach(s=>s.innerHTML=selectEntree);
+document.querySelectorAll(".select-plat").forEach(s=>s.innerHTML=selectPlat);
+document.querySelectorAll(".select-dessert").forEach(s=>s.innerHTML=selectDessert);
+
+}
 
 
 
