@@ -108,9 +108,51 @@ document.querySelectorAll(".select-entree").forEach(s=>s.innerHTML=selectEntree)
 document.querySelectorAll(".select-plat").forEach(s=>s.innerHTML=selectPlat);
 document.querySelectorAll(".select-dessert").forEach(s=>s.innerHTML=selectDessert);
 
+
+
+document.querySelectorAll('.total-jour').forEach(t=>t.textContent='0dh');
 }
 
+function trouverPrix(idString){
+    if(idString===''){
+        return 0;
+    }
+    let idNum=Number(idString);
 
+    for(let i=0;i<recette.length;i++){
+        if(recettes[i].id===idNum){
+            return recettes[i].prix;
+        }
+    }
+    return 0 ;
+}
+function totalcalcul(){
+    let jours=document.querySelectorAll('.jour-carte');
+    for(let i=0;i<jours.length;i++){
+        let jour=jours[i];
+        let selects=jour.querySelectorAll('select');
+        let afficheTotal=jour.querySelector('.total-jour');
+
+
+        let selectEntree=selects[0];
+        let selectPlat=selects[1];
+        let selectDessert=selects[2];
+
+
+        for(let j=0;j<selects.length;j++){
+            selects[j].addEventListener('change',function(){
+                let prixEntree=trouverPrix(selectEntree.value);
+
+
+                                let prixPlat=trouverPrix(selectPlat.value);
+                let prixDessert=trouverPrix(selectDessert.value);
+                let total = prixEntree + prixPlat + prixDessert;
+afficheTotal.textContent=total+'DH';
+            })
+        }
+    }
+}
+totalcalcul()
 
 
 
